@@ -1,0 +1,341 @@
+﻿@model AptitudeTestOnline.Models.ExamModels
+
+@{
+    ViewBag.Title = "Create";
+    IEnumerable<AptitudeTestOnline.Models.QuestionsModels> Questions =
+        ViewData["Questions"] as IEnumerable<AptitudeTestOnline.Models.QuestionsModels>;
+    IEnumerable<AptitudeTestOnline.Models.TypeOfQuestionModel> TypeOfQuestion =
+        ViewData["TypeOfQuestion"] as IEnumerable<AptitudeTestOnline.Models.TypeOfQuestionModel>;
+}
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h2 class="text-center text-primary">Create new exam</h2>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group row">
+            <label for="ExamName" class="control-label col-md-2">Exam Name</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ExamName, new { htmlAttributes = new { @class = "form-control text-box single-line", required = true } })
+                @Html.ValidationMessageFor(model => model.ExamName, "", new { @class = "text-danger font-alert" })
+            </div>
+            
+        </div>
+
+        <div class="form-group row">
+            <label for="Description" class="control-label col-md-2">Exam Description</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control text-box single-line", required = true } })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger font-alert" })
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <label class="control-label col-md-2">Setup Question</label>
+            <div class="col-md-10">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#general-knowledge" role="tab">General Knowledge</a>
+                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#mathematics" role="tab">Mathematics</a>
+                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#computer-technology" role="tab">Computer Technology</a>
+                    </div>
+                </nav>
+                <div class="tab-content admin" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="general-knowledge" role="tabpanel" style="margin-top: 20px;">
+
+                        <div class="form-group row">
+                            <label for="T1Q1" class="control-label col-md-2">Question (1)</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="T1Q1" name="T1Q1">
+                                    @foreach (var item in Questions)
+                                    {
+                                        if (item.TypeOfQuestion == 1)
+                                        {
+                                            <option value="@item.QuestionsID">@item.QuestionsName</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="T1Q2" class="control-label col-md-2">Question (2)</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="T1Q2" name="T1Q2">
+                                    @foreach (var item in Questions)
+                                    {
+                                        if (item.TypeOfQuestion == 1)
+                                        {
+                                            <option value="@item.QuestionsID">@item.QuestionsName</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="T1Q3" class="control-label col-md-2">Question (3)</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="T1Q3" name="T1Q3">
+                                    @foreach (var item in Questions)
+                                    {
+                                        if (item.TypeOfQuestion == 1)
+                                        {
+                                            <option value="@item.QuestionsID">@item.QuestionsName</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="T1Q4" class="control-label col-md-2">Question (4)</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="T1Q4" name="T1Q4">
+                                    @foreach (var item in Questions)
+                                    {
+                                        if (item.TypeOfQuestion == 1)
+                                        {
+                                            <option value="@item.QuestionsID">@item.QuestionsName</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="T1Q5" class="control-label col-md-2">Question (5)</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="T1Q5" name="T1Q5">
+                                    @foreach (var item in Questions)
+                                    {
+                                        if (item.TypeOfQuestion == 1)
+                                        {
+                                            <option value="@item.QuestionsID">@item.QuestionsName</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="mathematics" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+                        <div class="form-group row">
+                            <label for="T2Q1" class="control-label col-md-2">Question (1)</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="T2Q1" name="T2Q1">
+                                    @foreach (var item in Questions)
+                                    {
+                                        if (item.TypeOfQuestion == 2)
+                                        {
+                                            <option value="@item.QuestionsID">@item.QuestionsName</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="T2Q2" class="control-label col-md-2">Question (2)</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="T2Q2" name="T2Q2">
+                                    @foreach (var item in Questions)
+                                    {
+                                        if (item.TypeOfQuestion == 2)
+                                        {
+                                            <option value="@item.QuestionsID">@item.QuestionsName</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="T2Q3" class="control-label col-md-2">Question (3)</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="T2Q3" name="T2Q3">
+                                    @foreach (var item in Questions)
+                                    {
+                                        if (item.TypeOfQuestion == 2)
+                                        {
+                                            <option value="@item.QuestionsID">@item.QuestionsName</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="T2Q4" class="control-label col-md-2">Question (4)</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="T2Q4" name="T2Q4">
+                                    @foreach (var item in Questions)
+                                    {
+                                        if (item.TypeOfQuestion == 2)
+                                        {
+                                            <option value="@item.QuestionsID">@item.QuestionsName</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="T2Q5" class="control-label col-md-2">Question (5)</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="T2Q5" name="T2Q5">
+                                    @foreach (var item in Questions)
+                                    {
+                                        if (item.TypeOfQuestion == 2)
+                                        {
+                                            <option value="@item.QuestionsID">@item.QuestionsName</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="computer-technology" role="tabpanel" aria-labelledby="nav-contact-tab">
+
+                        <div class="form-group row">
+                            <label for="T3Q1" class="control-label col-md-2">Question (1)</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="T3Q1" name="T3Q1">
+                                    @foreach (var item in Questions)
+                                    {
+                                        if (item.TypeOfQuestion == 3)
+                                        {
+                                            <option value="@item.QuestionsID">@item.QuestionsName</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="T3Q2" class="control-label col-md-2">Question (2)</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="T3Q2" name="T3Q2">
+                                    @foreach (var item in Questions)
+                                    {
+                                        if (item.TypeOfQuestion == 3)
+                                        {
+                                            <option value="@item.QuestionsID">@item.QuestionsName</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="T3Q3" class="control-label col-md-2">Question (3)</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="T3Q3" name="T3Q3">
+                                    @foreach (var item in Questions)
+                                    {
+                                        if (item.TypeOfQuestion == 3)
+                                        {
+                                            <option value="@item.QuestionsID">@item.QuestionsName</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="T3Q4" class="control-label col-md-2">Question (4)</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="T3Q4" name="T3Q4">
+                                    @foreach (var item in Questions)
+                                    {
+                                        if (item.TypeOfQuestion == 3)
+                                        {
+                                            <option value="@item.QuestionsID">@item.QuestionsName</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="T3Q5" class="control-label col-md-2">Question (5)</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="T3Q5" name="T3Q5">
+                                    @foreach (var item in Questions)
+                                    {
+                                        if (item.TypeOfQuestion == 3)
+                                        {
+                                            <option value="@item.QuestionsID">@item.QuestionsName</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p style="color: red" id="exam-alert"></p>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="button" id="btn-test" class="btn btn-success mr-2">Create</button>
+                <input type="submit" value="Create" id="btn-create-exam" class=" hidden" />
+                @Html.ActionLink("Back to List", "Index", "Exam", null, htmlAttributes: new { @class = "btn btn-light" })
+            </div>
+        </div>
+</div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+   
+}
+<script src="https://code.jquery.com/jquery-3.3.1.js" ></script>
+
+<script>
+    $("#btn-test").click(function () {
+        var arr = [];
+        var check = true;
+        for (let i = 1; i <= 3; i++) {
+            for (let j = 1; j <= 5; j++) {
+                let name = "#T" + i + "Q" + j;
+                let value = $(name).val();
+                let idx = arr.indexOf(value);
+                if (idx == -1) arr.push(value);
+                else {
+                    check = false;
+                    
+                    var typeOfQuestions = "";
+                    switch (i) {
+                        case 1:
+                            typeOfQuestions = "General Knowledge";
+                            break;
+                        case 2:
+                            typeOfQuestions = "Mathematics";
+                            break;
+                        case 3:
+                            typeOfQuestions = "Computer Technology";
+                            break;
+
+                    }
+                    var text = "Questions " + j + " of tab " + typeOfQuestions + " duplicate, please replace!"
+                    $("#exam-alert").text(text);
+                }
+            }
+        }
+        if (check) {
+            $("#btn-create-exam").click();
+        }
+    })
+</script>

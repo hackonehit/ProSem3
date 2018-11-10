@@ -1,0 +1,127 @@
+﻿
+@model PagedList.IPagedList<AptitudeTestOnline.Models.Accounts>
+
+@using PagedList.Mvc
+@using AptitudeTestOnline.Models;
+
+@{
+    int i = 0;
+
+    IEnumerable<Accounts> ListAccount = ViewData["ListAccount"]
+    as IEnumerable<Accounts>;
+    IEnumerable<DetailsRegistrations> ListRegister = ViewData["ListRegister"]
+        as IEnumerable<DetailsRegistrations>;
+
+
+    ViewBag.Title = "Index";
+
+}
+<style>
+    .form-find input {
+        border: 1px solid silver;
+        border-radius: 3px;
+        min-height: 20px;
+        max-height: 34px;
+        padding: 5px;
+    }
+</style>
+<div class="row mb-3">
+
+    <div class="col-12">
+        @using (Html.BeginForm("Index", "Candidate", FormMethod.Get))
+        {
+            <div class="form-find">
+                @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, htmlAttributes: new { @class = "find-admin", placeholder = "Enter name" })
+                <button type="submit" class="btn btn-default btn-outline-primary">Search</button>
+            </div>
+        }
+    </div>
+</div>
+
+<h2 class="text-center text-primary">List Result Of Candidate</h2>
+<div class="border-window">
+    <div class="table-responsive">
+        <table class="table table table-bordered table-hover">
+            <tr class="bg-default">
+                <th style="width:5%">
+                    #
+                </th>
+                <th class="w-2">
+                    Full Name
+                </th>
+                <th class="w-2">
+                    Email
+                </th>
+                <th class="w-2">
+                    Education
+                </th>
+                <th class="w-2">
+                    Experience
+                </th>
+                <th style="width:15%">
+                    Mark
+                </th>
+
+            </tr>
+
+            @foreach (var account in ListAccount)
+            {
+                foreach (var regis in ListRegister)
+                {
+                    if (account.AccountID == regis.AccountID)
+                    {
+                        i++;
+                        <tr>
+                            <td>
+                                @i
+                            </td>
+                            <td>
+                                @account.Name
+                            </td>
+                            <td>
+                                @account.Email
+                            </td>
+                            <td>
+                                @account.Education
+                            </td>
+                            <td>
+                                @account.Experience
+                            </td>
+                            
+                            <td>
+                                @if(regis.Mark > 0 )
+                                {
+                                    <p>@regis.Mark</p>
+                                }
+                                
+                            </td>
+                            @*<td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.AccountID }) |
+                                    @Html.ActionLink("Details", "Details", new { id = item.AccountID }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.AccountID })
+                            </td>*@
+                        </tr>
+
+                    }
+                }
+
+            }
+
+        </table>
+    </div>
+</div>
+
+    <div class="pagi-admin">
+        <p>
+            Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+        </p>
+        @Html.PagedListPager(Model, page => Url.Action("Index",
+        new { page, currentFilter = ViewBag.CurrentFilter }))
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    <script>
+        $('.pagi-admin .pagination').addClass('justify-content-center');
+        var heightCard = $('body').height() - 430;
+        $('.border-window').height(heightCard);
+    </script>

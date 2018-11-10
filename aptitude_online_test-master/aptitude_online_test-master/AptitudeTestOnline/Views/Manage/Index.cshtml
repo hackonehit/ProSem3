@@ -1,0 +1,66 @@
+﻿@model AptitudeTestOnline.Models.IndexViewModel
+    @using AptitudeTestOnline.Models;
+
+@{
+    ViewBag.Title = "Manage Account";
+    Accounts info = ViewData["AccountInfor"] as Accounts;
+}
+
+<h2 class="text-info text-center">@ViewBag.Title.</h2>
+
+<p class="text-success">@ViewBag.StatusMessage</p>
+<div>
+    
+    <hr />
+    <h4 class="text-center text-info">Your Account Info</h4>
+    <dl class="dl-horizontal text-info">
+        <dt>
+            Full Name
+        </dt>
+        <dd>
+            @info.Name
+        </dd>
+        <dt>
+            Education
+        </dt>
+        <dd>
+            @info.Education
+        </dd>
+        <dt>
+            Experience
+        </dt>
+        <dd>
+            @info.Experience
+        </dd>
+        <dt>
+            Interest
+        </dt>
+        <dd>
+            @info.Interest
+        </dd>
+        <dt>
+            Date Of Birth
+        </dt>
+        <dd>
+            @info.Dateofbirth.Value.ToShortDateString()
+        </dd>
+    </dl>
+    <dl class="dl-horizontal text-info">
+        <dt>Password:</dt>
+        <dd>
+            [
+            @if (Model.HasPassword)
+            {
+                @Html.ActionLink("Change your password", "ChangePassword")
+            }
+            else
+            {
+                @Html.ActionLink("Create", "SetPassword")
+            }
+            ]
+        </dd>
+        
+       
+        
+    </dl>
+</div>

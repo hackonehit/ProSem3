@@ -1,0 +1,78 @@
+﻿@using AptitudeTestOnline.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+}
+
+<style>
+    .login-alert {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+</style>
+
+<div class="container-scroller">
+
+    <section id="loginForm">
+        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="container-fluid page-body-wrapper full-page-wrapper auth-page">
+                <div class="content-wrapper d-flex align-items-center auth auth-bg-1 theme-one">
+                    <div class="row w-100">
+                        <div class="col-lg-4 mx-auto">
+                            <div class="auto-form-wrapper">
+                                <form action="#">
+                                    <div class="form-group">
+                                        @Html.Label("Username", new { @class = "col-md-3 control-label" })
+                                        <div class="input-group col-md-9">
+                                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholer = "username" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+
+                                        @Html.Label("Password", new { @class = "col-md-3 control-label" })
+                                        <div class="input-group col-md-9">
+                                            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+
+                                    <p style="text-align: center">
+                                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger login-alert" })
+                                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger login-alert", placeholer = "******" })
+                                        @Html.ValidationSummary(true, "", new { @class = "text-danger login-alert" })
+                                    </p>
+
+                                    <div class="form-group">
+                                        <button type="submit" value="Log in" class="btn btn-primary submit-btn btn-block">Login</button>
+                                    </div>
+                                    
+                                </form>
+                            </div>
+                            <ul class="auth-footer">
+                                <li>
+                                    <a href="#">Conditions</a>
+                                </li>
+                                <li>
+                                    <a href="#">Help</a>
+                                </li>
+                                <li>
+                                    <a href="#">Terms</a>
+                                </li>
+                            </ul>
+                            <p class="footer-text text-center">copyright © 2018 Aptitude Online Test. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- content-wrapper ends -->
+            </div>
+        }
+    </section>
+
+    <!-- page-body-wrapper ends -->
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

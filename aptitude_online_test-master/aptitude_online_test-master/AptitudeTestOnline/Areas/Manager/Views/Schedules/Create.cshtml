@@ -1,0 +1,54 @@
+﻿@model AptitudeTestOnline.Models.SchedulesModels
+
+@{
+    ViewBag.Title = "Create Schedule";
+    IEnumerable<AptitudeTestOnline.Models.ExamModels> Exam =
+        ViewData["Exam"] as IEnumerable<AptitudeTestOnline.Models.ExamModels>;
+}
+<div class="forms-sample">
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal ">
+        <h2 class="text-center text-primary">Create new schedule</h2>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group row">
+           <label for="ExamID" class="control-label col-md-2">Exam Name</label>
+            <div class="col-sm-9">
+                <select class="form-control" id="ExamID" name="ExamID">
+                    @foreach (var item in Exam)
+                    {
+                        <option value="@item.ExamID">@item.ExamName</option>
+                    }
+                </select>
+            </div>
+            @Html.ValidationMessageFor(model => model.ExamID, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-2" for="DateOfTime">Date Of Time</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" data-val="true" data-val-date="The field DateOfTime must be a date." data-val-required="The DateOfTime field is required." id="DateOfTime" min="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")" name="DateOfTime" type="datetime-local" value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")">
+                @Html.ValidationMessageFor(model => model.DateOfTime, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group ">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-success mr-2" />
+                @Html.ActionLink("Back to List", "Index", null, htmlAttributes: new { @class = "btn btn-light" })
+            </div>
+        </div>
+
+    </div>
+
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

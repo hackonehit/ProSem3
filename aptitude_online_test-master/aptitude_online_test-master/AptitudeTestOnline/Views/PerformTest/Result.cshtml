@@ -1,0 +1,44 @@
+﻿@model AptitudeTestOnline.Models.DetailsRegistrations
+
+@{
+    ViewBag.Title = "Result";
+    if(Model.Mark >= 40)
+    {
+        ViewBag.AlertTitle = "Congratulation!";
+        ViewBag.Content = "Please waiting own staff contact with you!";
+    } else
+    {
+        ViewBag.AlertTitle = "Don't wory!";
+        ViewBag.Content = "We will hope to receive you CV lattes!";
+    }
+}
+
+<style>
+    .card p {
+        font-size: 16px;
+    }
+</style>
+
+<div class="content-wrapper">
+    <div class="card">
+        <div class="card-body" style="min-height: 580px">
+
+            <div class="row">
+                <div class="offset-sm-3 col-sm-6">
+
+                    <div class="card" style="border: 1px solid rgba(0,0,0,.125);">
+                        <h5 class="card-header text-center" style="font-size: 18px">@ViewBag.AlertTitle</h5>
+                        <div class="card-body">
+                            <p>You have : <b>@Html.DisplayFor(item => item.Mark)</b> points</p>
+                            <p>@ViewBag.Content</p>
+                            <a href="/" class="btn btn-primary">Go home page!</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
