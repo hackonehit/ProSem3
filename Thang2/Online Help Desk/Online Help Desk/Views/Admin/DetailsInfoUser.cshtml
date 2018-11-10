@@ -1,0 +1,83 @@
+﻿@model Online_Help_Desk.Models.EndUser
+
+<div>
+    <h4>EndUser</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            UserName:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EUUserName)
+        </dd>
+        <dt>
+            Password:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EUPassword)
+        </dd>
+
+        <dt>
+            FullName:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EUFullName)
+        </dd>
+
+        <dt>
+            Gender:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            Status:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EUStatus)
+        </dd>
+
+        <dt>
+            Phone:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            Address:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            Email:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            Day of birth:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOB)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditInforUser", new { id = Model.EUUserName }) |
+    @Html.ActionLink("Back to List", "DetailListUser")
+</p>
