@@ -13,5 +13,8 @@ namespace Online_Help_Desk.Controllers
         {
             return View();
         }
+        public ActionResult create() {
+            return View();
+        }
     }
 }
