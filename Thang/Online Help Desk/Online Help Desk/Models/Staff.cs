@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
 
 namespace Online_Help_Desk.Models
 {
@@ -19,11 +19,13 @@ namespace Online_Help_Desk.Models
         [Required]
         [StringLength(50)]
         public string FullName { get; set; }
+
         [Required]
-        
-        public bool SStatus { get; set; }
-        [Required]
-        [Range(1,2)]
+        [Range(1, 3)]
         public int Level { get; set; }
+        [Required]
+        public bool Status { get; set; }
+        public ICollection<Request> Request { get; set; }
+        public ICollection<Reply> Reply { get; set; }
     }
 }

@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -112,19 +111,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\RequestController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\DbModel.cs" />
-    <Compile Include="Models\EndUser.cs" />
     <Compile Include="Models\Facility.cs" />
     <Compile Include="Models\Register.cs" />
     <Compile Include="Models\Reply.cs" />
     <Compile Include="Models\Request.cs" />
+    <Compile Include="Models\Enduser.cs" />
+    <Compile Include="Models\RequestReply.cs" />
     <Compile Include="Models\Staff.cs" />
+    <Compile Include="Models\StaffReply.cs" />
+    <Compile Include="Models\StaffRequest.cs" />
+    <Compile Include="Models\UserRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -135,14 +140,22 @@
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-<<<<<<< HEAD:Online Help Desk/Online Help Desk/Online Help Desk.csproj
-    <Content Include="Views\Home\create.cshtml" />
-    <Content Include="Views\Request\Index.cshtml" />
-=======
-    <Content Include="Views\Home\Create.cshtml" />
->>>>>>> e87f9d9e9bcfaa9808e5d9fadaba1383f2d944fa:Thang/Online Help Desk/Online Help Desk/Online Help Desk.csproj
+    <Content Include="Views\Login\LoggedIn.cshtml" />
+    <Content Include="Views\Admin\CreateStaff.cshtml" />
+    <Content Include="Views\Admin\CreateEndUser.cshtml" />
+    <Content Include="Views\Admin\DetailListUser.cshtml" />
+    <Content Include="Views\Admin\DetailListStaff.cshtml" />
+    <Content Include="Views\Admin\Edit.cshtml" />
+    <Content Include="Views\Admin\DetailsInfoUser.cshtml" />
+    <Content Include="Views\Admin\EditInforUser.cshtml" />
+    <Content Include="Views\Admin\DetailsInfoStaffs.cshtml" />
+    <Content Include="Views\Admin\EditInforStaff.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Admin\ViewListRegister.cshtml" />
+    <Content Include="Views\Admin\DetailsRegister.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -152,6 +165,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Home\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

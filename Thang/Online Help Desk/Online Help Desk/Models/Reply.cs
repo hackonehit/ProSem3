@@ -23,6 +23,8 @@ namespace Online_Help_Desk.Models
         public string ReImage { get; set; }
         [Required]
         public DateTime ReplyDate { get; set; }
+        public Request Request { get; set; }
+        public  Staff   Staff { get; set; }
 
     }
 }
