@@ -195,6 +195,24 @@ namespace Online_Help_Desk.Controllers
             return View();
         }
         //------------------------------------------
-        
+        //-------View List Register-----------------
+        public ActionResult ViewListRegister()
+        {
+            return View(db.RegisterList);
+        }
+        //------------------------------------------
+        //----Details End-User Register-------------
+        public ActionResult DetailsRegister(int id)
+        {
+            var model = db.RegisterList.Find(id);
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult DetailsRegister(Register eRe, int id)
+        {
+            var model = db.RegisterList.SingleOrDefault(e => e.RegisterID == id);
+            return View(model);
+        }
+        //------------------------------------------
     }
 }

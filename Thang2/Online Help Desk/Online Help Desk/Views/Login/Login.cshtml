@@ -1,9 +1,9 @@
 ﻿@model Online_Help_Desk.Models.Admin
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Admin</h4>
         <hr />
@@ -33,5 +33,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Register", "Register","Account")
 </div>

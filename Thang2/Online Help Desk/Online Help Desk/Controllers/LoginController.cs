@@ -16,7 +16,7 @@ namespace Online_Help_Desk.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Login(Admin AdLogin)
+        public ActionResult Login(Admin AdLogin, Staff stlogin)
         {
             try
             {
@@ -25,6 +25,17 @@ namespace Online_Help_Desk.Controllers
                 {
                     Session["UserName"] = model.UserName.ToString();
                     return RedirectToAction("Index","Admin");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Tk or MK sai");
+                }
+                //-------------------------------------------------
+                var model1 = db.StaffList.Single(p => p.SUserName == stlogin.SUserName && p.SPassword == stlogin.SPassword);
+                if (model1 != null)
+                {
+                    Session["SUserName"] = model1.SUserName.ToString();
+                    return RedirectToAction("LoggedIn");
                 }
                 else
                 {
@@ -39,7 +50,7 @@ namespace Online_Help_Desk.Controllers
         }
         public ActionResult LoggedIn()
         {
-            if (Session["UserName"] != null)
+            if (Session["SUserName"] != null)
             {
                 return View();
             }
@@ -48,6 +59,12 @@ namespace Online_Help_Desk.Controllers
                 return RedirectToAction("Login");
             }
             
+        }
+        [AllowAnonymous]
+        public ActionResult Logout()
+        {
+            Session.Clear();
+            return RedirectToAction("Login", "Login");
         }
     }
 }
