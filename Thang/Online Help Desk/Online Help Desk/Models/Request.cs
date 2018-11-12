@@ -34,5 +34,8 @@ namespace Online_Help_Desk.Models
         
         public string Remarks{ get; set; }
         public int MyProperty { get; set; }
+        public Enduser Enduser { get; set; }
+        public Staff Staff { get; set; }
+        public ICollection<Reply> Reply { get; set; }
     }
 }

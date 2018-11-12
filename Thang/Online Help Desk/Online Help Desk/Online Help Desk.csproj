@@ -124,7 +124,12 @@
     <Compile Include="Models\Register.cs" />
     <Compile Include="Models\Reply.cs" />
     <Compile Include="Models\Request.cs" />
-    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Enduser.cs" />
+    <Compile Include="Models\RequestReply.cs" />
+    <Compile Include="Models\Staff.cs" />
+    <Compile Include="Models\StaffReply.cs" />
+    <Compile Include="Models\StaffRequest.cs" />
+    <Compile Include="Models\UserRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -141,7 +146,6 @@
     <Content Include="Views\Admin\CreateEndUser.cshtml" />
     <Content Include="Views\Admin\DetailListUser.cshtml" />
     <Content Include="Views\Admin\DetailListStaff.cshtml" />
-    <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\Edit.cshtml" />
     <Content Include="Views\Admin\DetailsInfoUser.cshtml" />
     <Content Include="Views\Admin\EditInforUser.cshtml" />
@@ -151,6 +155,7 @@
     <Content Include="Views\Admin\ViewListRegister.cshtml" />
     <Content Include="Views\Admin\DetailsRegister.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
