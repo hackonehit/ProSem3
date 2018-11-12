@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Online_Help_Desk.Models.EndUser>
+
+<p>
+    @Html.ActionLink("Create New End-User", "CreateEndUser")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            UserName
+        </th>
+
+        <th>
+            FullName
+        </th>
+
+
+
+        <th>
+            Address
+        </th>
+        <th>
+            Email
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EUUserName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.EUFullName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "EditInforUser", new { id = item.EUUserName }) |
+                @Html.ActionLink("Details", "DetailsInfoUser", new { id = item.EUUserName }) |
+                @Html.ActionLink("Block", "Delete", new { id = item.EUUserName })
+            </td>
+        </tr>
+    }
+
+</table>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
