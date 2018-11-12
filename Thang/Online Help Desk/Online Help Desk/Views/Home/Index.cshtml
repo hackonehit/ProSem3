@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Online_Help_Desk.Models.Admin>
+@{
+    ViewBag.Title = "Index";
+}
+<br /> 
+@Html.ActionLink("Create","Create")
+<h2>Test</h2>
+<table class="table">
+    <tr>
+        <th>UserName</th>
+        <th>Password</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+
+
+        <td>@item.UserName</td>
+        <td>@item.Password</td>
+    </tr>
+            }
+        
+    </table>
