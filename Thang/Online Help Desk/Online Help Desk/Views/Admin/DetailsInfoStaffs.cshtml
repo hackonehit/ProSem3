@@ -1,0 +1,51 @@
+﻿@model Online_Help_Desk.Models.Staff
+
+<div>
+    <h4>Staff</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            UserName:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SUserName)
+        </dd>
+        <dt>
+            Password:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SPassword)
+        </dd>
+
+        <dt>
+            FullName:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+
+        <dt>
+            Status:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SStatus)
+        </dd>
+
+        <dt>
+            Level:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Level)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditInforStaff", new { id = Model.SUserName }) |
+    @Html.ActionLink("Back to List", "DetailListStaff","Admin")
+</p>

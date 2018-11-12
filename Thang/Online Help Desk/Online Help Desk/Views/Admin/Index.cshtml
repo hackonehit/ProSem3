@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Online_Help_Desk.Models.Admin>
+
+<p>
+    @Html.ActionLink("Change Password", "Edit","Admin", new {id = Model. })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            
+        </td>
+    </tr>
+}
+
+</table>
