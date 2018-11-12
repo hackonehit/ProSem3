@@ -8,15 +8,15 @@ using System.Web.Mvc;
 
 namespace Online_Help_Desk.Models
 {
-    public class User
+    public class Enduser
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public string UserName { get; set; }
+        public string EUUserName { get; set; }
         [Required]
         [StringLength(50)]
         [DataType(DataType.Password)]
-        public string Password { get; set; }
+        public string EUPassword { get; set; }
         [Required]
         [StringLength(50)]
         public string FullName { get; set; }
@@ -39,9 +39,7 @@ namespace Online_Help_Desk.Models
         [Display(Name="Date of Birth")]
         [DataType(DataType.Date)]
         public string DOB { get; set; }
-        [Required]
-        [Range(1, 3)]
-        public int Level { get; set; }
+        
         public ICollection<Request> requests { get; set; }
     }
 }

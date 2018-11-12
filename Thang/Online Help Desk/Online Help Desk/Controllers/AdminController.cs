@@ -11,9 +11,9 @@ namespace Online_Help_Desk.Controllers
     {
         DbModel db = new DbModel();
         //----Home(Admin)---------------------------
-        public ActionResult Index(string U1)
+        public ActionResult Index()
         {
-            ViewBag.Test = U1;
+            
             return View(db.Admin);
         }
         //------------------------------------------
@@ -52,13 +52,13 @@ namespace Online_Help_Desk.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult CreateEndUser(EndUser newEndUser)
+        public ActionResult CreateEndUser(Enduser newEndUser)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    db.Entry<EndUser>(newEndUser).State = System.Data.Entity.EntityState.Added;
+                    db.Entry<Enduser>(newEndUser).State = System.Data.Entity.EntityState.Added;
                     db.SaveChanges();
                     ModelState.AddModelError("", "Add complete!!!");
                 }
@@ -123,7 +123,7 @@ namespace Online_Help_Desk.Controllers
             return View(model);
         }
         [HttpPost]
-        public ActionResult DetailsInfoUser(EndUser eUser, string id)
+        public ActionResult DetailsInfoUser(Enduser eUser, string id)
         {
             var model = db.UserList.SingleOrDefault(e => e.EUUserName == id);
             return View(model);
@@ -132,7 +132,7 @@ namespace Online_Help_Desk.Controllers
         //----Edit Information(End-User)------------
         public ActionResult EditInforUser(string id)
         {
-            EndUser model = db.UserList.SingleOrDefault(e => e.EUUserName == id);
+            Enduser model = db.UserList.SingleOrDefault(e => e.EUUserName == id);
             if (model == null)
             {
                 Response.StatusCode = 404;
@@ -141,7 +141,7 @@ namespace Online_Help_Desk.Controllers
             return View(model);
         }
         [HttpPost]
-        public ActionResult EditInforUser(EndUser eUser)
+        public ActionResult EditInforUser(Enduser eUser)
         {
             try
             {

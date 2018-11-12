@@ -1,25 +1,25 @@
 ﻿@model IEnumerable<Online_Help_Desk.Models.Admin>
 
-@if (Session["UserName"] != null)
-{
-    <h3>Hello @Session["UserName"].ToString()</h3>
-}
-@ViewBag.Test
-@foreach (var item in Model)
-{
-
-    <p>
-        @Html.ActionLink("Change Password", "Edit", new { id = item.UserName })
-
-    </p>
-}
-
-    <p>
-        @Html.ActionLink("View List Register", "ViewListRegister")
-    </p>
 <p>
-    @Html.ActionLink("View List Staff", "DetailListStaff")
+    @Html.ActionLink("Change Password", "Edit","Admin", new {id = Model. })
 </p>
-<p>
-    @Html.ActionLink("View List End-User", "DetailListUser")
-</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            
+        </td>
+    </tr>
+}
+
+</table>
