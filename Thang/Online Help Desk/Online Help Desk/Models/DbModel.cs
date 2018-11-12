@@ -18,5 +18,6 @@ namespace Online_Help_Desk.Models
         public DbSet<Request> RequestList { get; set; }
         public DbSet<Reply> ReplyList { get; set; }
         public DbSet<Register> RegisterList { get; set; }
+        public DbSet<BigView> Viewlist { get; set; }
     }
 }

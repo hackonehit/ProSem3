@@ -33,5 +33,6 @@ namespace Online_Help_Desk.Models
         [StringLength(200)]
         
         public string Remarks{ get; set; }
+        public int MyProperty { get; set; }
     }
 }
