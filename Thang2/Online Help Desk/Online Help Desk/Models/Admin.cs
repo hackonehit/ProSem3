@@ -11,6 +11,7 @@ namespace Online_Help_Desk.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+       
         public string UserName { get; set; }
         [Required]
         [StringLength(50)]

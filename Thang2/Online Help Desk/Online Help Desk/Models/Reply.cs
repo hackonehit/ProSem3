@@ -23,6 +23,6 @@ namespace Online_Help_Desk.Models
         public string ReImage { get; set; }
         [Required]
         public DateTime ReplyDate { get; set; }
-
+        public virtual ICollection<>
     }
 }

@@ -7,12 +7,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Online_Help_Desk.Models
 {
-    public class EndUser
+    public class User
     {
         
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public string EUUserName { get; set; }
+        public string Username { get; set; }
         [Required]
         [StringLength(50)]
         [DataType(DataType.Password)]
@@ -38,5 +38,8 @@ namespace Online_Help_Desk.Models
         [Required]
         [DataType(DataType.Date)]
         public string DOB { get; set; }
+        [Required]
+        [Range(1, 3)]
+        public int Level { get; set; }
     }
 }

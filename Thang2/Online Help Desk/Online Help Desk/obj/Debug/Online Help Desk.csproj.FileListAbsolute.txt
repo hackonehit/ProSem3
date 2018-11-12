@@ -143,3 +143,74 @@ C:\Users\bjnng\Desktop\PRJ Du phong\Online Help Desk\Online Help Desk\bin\System
 C:\Users\bjnng\Desktop\PRJ Du phong\Online Help Desk\Online Help Desk\bin\System.Web.Mvc.xml
 C:\Users\bjnng\Desktop\PRJ Du phong\Online Help Desk\Online Help Desk\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\bjnng\Desktop\PRJ Du phong\Online Help Desk\Online Help Desk\obj\Debug\Online Help Desk.csproj.CopyComplete
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\Online Help Desk.dll.config
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\Online Help Desk.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\Online Help Desk.pdb
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\csc.exe
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\csc.exe.config
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\csc.rsp
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\csi.exe
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\csi.exe.config
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\csi.rsp
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.AppContext.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.Console.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.IO.Compression.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.IO.Pipes.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.Security.Claims.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.ValueTuple.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.Xml.XPath.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\vbc.exe
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\vbc.exe.config
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\vbc.rsp
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\VBCSCompiler.exe
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\EntityFramework.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\EntityFramework.SqlServer.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\System.Web.Helpers.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\System.Web.Mvc.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\System.Web.Razor.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\System.Web.Webpages.Deployment.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\System.Web.Webpages.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\System.Web.Webpages.Razor.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\EntityFramework.xml
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\EntityFramework.SqlServer.xml
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\System.Web.Razor.xml
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\System.Web.Webpages.xml
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\System.Web.Webpages.Deployment.xml
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\System.Web.Webpages.Razor.xml
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\System.Web.Helpers.xml
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\System.Web.Mvc.xml
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\obj\Debug\Online Help Desk.csprojResolveAssemblyReference.cache
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\obj\Debug\Online Help Desk.dll
+C:\Users\bemap\Desktop\ProjectSem3\ProSem3\Thang2\Online Help Desk\Online Help Desk\obj\Debug\Online Help Desk.pdb
