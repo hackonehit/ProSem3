@@ -1,11 +1,11 @@
-﻿@model Online_Help_Desk.Models.EndUser
+﻿@model Online_Help_Desk.Models.Enduser
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>EndUser</h4>
+        <h4>Enduser</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -25,10 +25,10 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.EUFullName, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.FullName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.EUFullName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.EUFullName, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -41,11 +41,11 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.EUStatus, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.EUStatus)
-                    @Html.ValidationMessageFor(model => model.EUStatus, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.Status)
+                    @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
@@ -91,5 +91,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "DetailListUser")
+    @Html.ActionLink("Back to List", "Index")
 </div>
