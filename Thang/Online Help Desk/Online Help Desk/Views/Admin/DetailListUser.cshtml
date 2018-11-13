@@ -1,58 +1,46 @@
-﻿@model IEnumerable<Online_Help_Desk.Models.EndUser>
+﻿@model IEnumerable<Online_Help_Desk.Models.Enduser>
 
 <p>
-    @Html.ActionLink("Create New End-User", "CreateEndUser")
+    @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            UserName
+            @Html.DisplayNameFor(model => model.EUUserName)
         </th>
-
+        
+        
         <th>
-            FullName
+            @Html.DisplayNameFor(model => model.Status)
         </th>
-
-
-
+        
         <th>
-            Address
+            @Html.DisplayNameFor(model => model.Email)
         </th>
-        <th>
-            Email
-        </th>
-
+        
         <th></th>
     </tr>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.EUUserName)
-            </td>
-
-            <td>
-                @Html.DisplayFor(modelItem => item.EUFullName)
-            </td>
-
-            <td>
-                @Html.DisplayFor(modelItem => item.Address)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-
-            <td>
-                @Html.ActionLink("Edit", "EditInforUser", new { id = item.EUUserName }) |
-                @Html.ActionLink("Details", "DetailsInfoUser", new { id = item.EUUserName }) |
-                @Html.ActionLink("Block", "Delete", new { id = item.EUUserName })
-            </td>
-        </tr>
-    }
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EUUserName)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EUUserName }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EUUserName }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EUUserName })
+        </td>
+    </tr>
+}
 
 </table>
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
-

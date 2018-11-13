@@ -1,19 +1,19 @@
 ﻿@model IEnumerable<Online_Help_Desk.Models.Staff>
 
 <p>
-    @Html.ActionLink("Create New Staff", "CreateStaff")
+    @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            UserName
+            @Html.DisplayNameFor(model => model.SUserName)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.Level)
         </th>
         <th>
-            FullName
-        </th>
-       
-        <th>
-            Level
+            @Html.DisplayNameFor(model => model.Status)
         </th>
         <th></th>
     </tr>
@@ -23,22 +23,19 @@
         <td>
             @Html.DisplayFor(modelItem => item.SUserName)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FullName)
-        </td>
         
         <td>
             @Html.DisplayFor(modelItem => item.Level)
         </td>
         <td>
-            @Html.ActionLink("Edit", "EditInforStaff", new { id=item.SUserName }) |
-            @Html.ActionLink("Details", "DetailsInfoStaffs", new { id=item.SUserName }) |
-            @Html.ActionLink("Block", "BlockStaff", new { id=item.SUserName })
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SUserName }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SUserName }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SUserName })
         </td>
     </tr>
 }
 
 </table>
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
