@@ -1,0 +1,83 @@
+﻿@model Online_Help_Desk.Models.User
+
+@{
+    ViewBag.Title = "DetailsInfoUser";
+    Layout = "~/Views/Shared/_LayoutIndexAdmin.cshtml";
+}
+
+<h2>DetailsInfoUser</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EUPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EUPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EUFullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EUFullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EUStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EUStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOB)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditInforUser", new { id = Model.EUUsername }) |
+    @Html.ActionLink("Back to List", "DetailListUser", "Admin")
+</p>

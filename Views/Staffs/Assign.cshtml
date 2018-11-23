@@ -1,0 +1,96 @@
+﻿@model Online_Help_Desk.Models.Request
+
+@{
+    ViewBag.Title = "Assign";
+    Layout = "~/Views/Shared/_LayoutIndexStaff.cshtml";
+}
+<div class="col-md-2 col-sm-2 well">
+    <ul class="nav nav-stacked nav-pills well">
+        <li class="active"><a data-toggle="pill" href="#">View Request</a></li>
+        <li><a data-toggle="pill" href="#menu1">Create Facility</a></li>
+        <li><a data-toggle="pill" href="#menu2">Manage Facility</a></li>
+        <li><a data-toggle="pill" href="#menu3">Get Report</a></li>
+    </ul>
+</div>
+<div class="col-md-10 col-sm-10">
+    
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>Request</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.RequestID)
+            @Html.HiddenFor(model => model.RequestStatus,  new { @value="Hay lam"});
+            <div class="form-group">
+                @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Remarks, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Remarks, new { htmlAttributes = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.Remarks, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.RequestStatus, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.RequestStatus, new { htmlAttributes = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.RequestStatus, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.RequestedDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model=>model.RequestedDate, "{0:dd/MM/yyyy}",new { htmlAttribute=new {@class="form-control",disable="disable",@readonly="readonly" } })
+                    @Html.ValidationMessageFor(model => model.RequestedDate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.RequestImage, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.RequestImage, new { htmlAttributes = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.RequestImage, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EUUsername, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.EUUsername, new { htmlAttributes = new { @class = "form-control", disable = "disable", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.EUUsername, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>FacilityID</label>
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.FacilityID, ViewBag.FacilityList as SelectList, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Assignee</label>
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.SUsername, ViewBag.StaffList as SelectList, new { @class = "form-control" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,68 @@
+﻿@model Online_Help_Desk.Models.Enduser
+<div class="panel panel-default">
+    <div class="panel-footer">
+        @using (Html.BeginForm("UserLogin", "Home", FormMethod.Post,new { @id="Username"}))
+        {
+               @Html.AntiForgeryToken()
+                <div class="form-horizontal">
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(model=>model.EUUsername, htmlAttributes: new { @class = "control-label" })
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.EUUsername, new { htmlAttributes = new { @class = "form-control", @name = "1" } })
+                            
+                         </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.EUPassword, htmlAttributes: new { @class = "control-label" })
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.EUPassword, new { htmlAttributes = new { @class = "form-control", @name = "2" } })
+                            @Html.ValidationMessageFor(model => model.EUPassword, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @{if (@Session["Login"].Equals("NotYet")) {
+                                // <h2>@Session["Check"].ToString()</h2>
+                            }
+                            else
+                            {
+                                <div class="alert alert-warning">
+                                    <strong>Invalid Username or password</strong>
+                                </div>
+                            }
+                        }
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input id="show" type="submit" value="Login" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+            
+        }
+        
+        <div class="panel panel-default">
+            <div class="panel-heading">Join us now!!</div>
+            <div class="panel-body">
+                New user
+                To access all features you need to create a personnal account.
+                <br>
+                <a data-toggle="modal" data-target="#myModal">Register</a>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                OUR LOCAL
+            </div>
+            <div class="panel-body">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3107.5605282330257!2d-97.6062173851568!3d38.842524457782844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87bcc5f310b5ae4d%3A0xeb66077d198a2f5a!2s422+E+Ash+St%2C+Salina%2C+KS+67401!5e0!3m2!1svi!2s!4v1541989899402" width="600" height="450" frameborder="0" style="width: 100%" a allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

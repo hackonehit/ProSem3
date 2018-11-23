@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Online_Help_Desk.Models.Request>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutIndexStaff.cshtml";
+}
+
+    <div class="col-md-2 col-sm-2 well">
+        <ul class="nav nav-stacked nav-pills well">
+            <li class="active"><a data-toggle="pill" href="#">View Request</a></li>
+            <li><a data-toggle="pill" href="#menu1">Create Facility</a></li>
+            <li><a data-toggle="pill" href="#menu2">Manage Facility</a></li>
+            <li><a data-toggle="pill" href="#menu3">Get Report</a></li>
+        </ul>
+    </div>
+    <div class="col-md-10 col-sm-10">
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RequestID)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Remarks)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RequestedDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RequestStatus)
+                    </th>
+                    <th>@Html.DisplayNameFor(model => model.EUUsername)</th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FacilityID)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SUsername)
+                    </th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RequestID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Remarks)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RequestedDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RequestStatus)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EUUsername)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FacilityID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SUsername)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Assign", "Assign", new { id = item.RequestID }) |
+                            @Html.ActionLink("Reject", "Reject", new { id = item.RequestID }) 
+                           
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+
+    </div>
