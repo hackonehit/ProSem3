@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Online_Help_Desk.Models.Request>
+@{
+    ViewBag.Title = "End User Request List";
+    Layout = "~/Views/Shared/_LayoutIndexEndUser.cshtml";
+}
+<div class="col-md-4 col-sm-4 well">
+    <ul class="nav nav-stacked nav-pills well">
+        <li class="active"><a data-toggle="pill" href="#menu1">My Request</a></li>
+        <li><a data-toggle="pill" href="#menu2">Create Reqeust</a></li>
+
+    </ul>
+</div>
+<div class="col-md-8 col-sm-8">
+    <div class="tab-content">
+     
+        <div id="menu1" class="tab-pane fade">
+            <div class="panel panel-default text-left">
+                <div class="panel-body">
+                    <table class="table">
+                        <tr>
+                            
+                            <th>
+                                @Html.DisplayNameFor(model => model.Title)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Remarks)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.RequestStatus)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.RequestedDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.RequestImage)
+                            </th>
+                            <th></th>
+                        </tr>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Title)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Remarks)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.RequestStatus)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.RequestedDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.RequestImage)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Replied", "Replied", new { id = item.RequestID }) |
+                                    @Html.ActionLink("Reject", "Reject", new { id = item.RequestID }) |
+
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        @{ Html.RenderPartial("_CreateRequest");}
+    </div>
+</div>
+

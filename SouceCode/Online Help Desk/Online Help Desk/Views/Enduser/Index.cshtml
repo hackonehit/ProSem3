@@ -1,0 +1,166 @@
+﻿@model Online_Help_Desk.Models.Enduser
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutIndexEndUser.cshtml";
+}
+<div class="col-md-2">
+
+</div>
+<div class="col-md-8">
+    <div class="col-md-4 col-sm-4 well">
+        <ul class="nav nav-stacked nav-pills well">
+            <li class="active"><a data-toggle="pill" href="#home">Create Request</a></li>
+            <li><a data-toggle="pill" href="#menu1">My Request</a></li>
+        </ul>
+    </div>
+    <div class="col-md-8 col-sm-8">
+        <div class="tab-content">
+
+            <div id="home" class="tab-pane fade in active">
+                <div class="panel panel-default text-left">
+                    <div class="panel-body">
+                        <h3>Create Request</h3>
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="title">Title:</label>
+                                <div class="col-sm-10">
+                                    <div class="dropdown">
+                                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                                            Library
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">HTML</a></li>
+                                            <li><a href="#">CSS</a></li>
+                                            <li><a href="#">JavaScript</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="remarks">Remarks:</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" rows="5" id="remarks"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <label class="control-label col-sm-2">Image</label>
+                                <div class="col-sm-10">
+                                    <button class="btn btn-default">Choose Image</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <div id="menu1" class="tab-pane fade">
+                <div class="panel panel-default text-left">
+                    <div class="panel-body">
+                        <p>Table List</p>
+                        <table class="table">
+                            <tr>
+                                <th>Title</th>
+                                <th>Remark</th>
+                                <th>Reply By</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>Library</td>
+                                <td>Broken in 3 days</td>
+                                <td>Mr Staff</td>
+                                <td>Pending</td>
+                                <td>12/12/2012</td>
+                                <td><a href="#">Update</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="menu2" class="tab-pane fade">
+                <div class="panel panel-default text-left">
+                    <div class="panel-body">
+                        <h3>My Profile</h3>
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="Fullname">FullName:</label>
+                                <div class="col-sm-10">
+                                    <input type="Text" class="form-control" id="Fullname" placeholder="Mr Young Lady" name="Fullname">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="remarks">Email:</label>
+                                <div class="col-sm-10">
+                                    <input type="Text" class="form-control" id="Email" placeholder="Demo@testReview" name="Email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <label class="control-label col-sm-2">Phone</label>
+                                <div class="col-sm-10">
+                                    <input type="Text" class="form-control" id="Phone" placeholder="0111111111" name="Phone">
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <label class="control-label col-sm-2">Address</label>
+                                <div class="col-sm-10">
+                                    <input type="Text" class="form-control" id="Address" placeholder="1 Anuven US" name="Address">
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <label class="control-label col-sm-2">Date of birth</label>
+                                <div class="col-sm-10">
+                                    <input type="Text" class="form-control" id="dob" placeholder="12/12/2012" name="dob">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-primary">Updated</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<div class="col-md-2 col-sm-12 sidenav">
+    <br />
+    <div class="panel panel-default">
+        <div class="panel-footer">
+
+            <label>Hello @Session["Login"]!</label>
+            <label><a href="#">Change Password</a></label>
+            <label><a href="#">Log out</a></label>
+
+
+
+        </div>
+    </div>
+    <hr />
+    <div class="panel panel-default">
+        <div class="panel-heading">New Facility!!!</div>
+        <div class="panel-body"><a href="#">Click for more information</a></div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            OUR LOCAL
+        </div>
+        <div class="panel-body">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3107.5605282330257!2d-97.6062173851568!3d38.842524457782844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87bcc5f310b5ae4d%3A0xeb66077d198a2f5a!2s422+E+Ash+St%2C+Salina%2C+KS+67401!5e0!3m2!1svi!2s!4v1541989899402" width="600" height="450" frameborder="0" style="width: 100%" a allowfullscreen></iframe>
+        </div>
+    </div>
+</div>

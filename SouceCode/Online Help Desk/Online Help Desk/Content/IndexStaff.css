@@ -1,0 +1,18 @@
+﻿ .row.content {height: 550px}
+     .sidenav {	
+      
+      height: 100%;
+    }
+    footer {
+      background-color:#e7e7e7;
+      color:black;
+      padding: 15px;
+    }
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }

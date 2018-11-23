@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Perfect Technological Innovation</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Q&A</a></li>
+                <li>@Html.ActionLink("My Profile", "EditProfile",new { id=Session["Username"].ToString()})</li>
+            </ul>
+
+        </div>
+    </nav>
+    <div class="container-fluid bg-3 text-center">
+        <div class="row">
+            @RenderBody()
+        </div>
+   </div>
+
+            <footer class="container-fluid text-center">
+                <div class="row">
+                    <div class="col-md-4">OUR SCHOOL</div>
+                    <div class="col-md-4">ARE</div>
+                    <div class="col-md-4">ONE</div>
+                </div>
+            </footer>
+</body>
+</html>

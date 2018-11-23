@@ -1,0 +1,2 @@
+C:\Users\bjnng\Desktop\PRJ Du phong\Online Help Desk\TestLogin\obj\Debug\TestLogin.csprojAssemblyReference.cache
+C:\Users\bjnng\Desktop\PRJ Du phong\Online Help Desk\TestLogin\obj\Debug\TestLogin.csproj.CoreCompileInputs.cache
